@@ -28,9 +28,8 @@ sudo git clone https://github.com/jhejderup/aws-tesseract.git;
 sudo git clone https://github.com/winglungngai/EC2Configuration.git;
 
 # copy the configuration;
-sudo cp ~/EC2Configuration/.profile ~/.profile;
-sudo unzip ~/EC2Configuration/ec2-api-tools.zip;
-sudo cp ~/EC2Configuration/ec2-api-tools ~/;
+sudo cp ~/EC2Configuration/.profile ~/;
+sudo unzip ~/EC2Configuration/ec2-api-tools.zip ~/;
 
 # run play when rebooting;
 $(crontab -l | { cat; echo "@reboot sudo bash -c \"~/EC2Configuration/startup.sh\""; } | crontab -);
