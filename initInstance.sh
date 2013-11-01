@@ -9,8 +9,6 @@ chmod 400 $2
 # the following long script to be executed in the target machine are embraced by ''
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i $2 ubuntu@$1 '
 
-sudo su;
-
 # install openjdk, git and unzip;
 yes | sudo apt-get update;
 yes | sudo apt-get install unzip;
