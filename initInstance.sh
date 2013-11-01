@@ -21,7 +21,6 @@ sudo unzip ~/play-2.2.1.zip;
 sudo chmod a+x ~/play-2.2.1/play;
 
 # download configuration or project from github;
-cd ~;
 sudo git clone https://github.com/jhejderup/aws-tesseract.git;
 sudo git clone https://github.com/winglungngai/EC2Configuration.git;
 
