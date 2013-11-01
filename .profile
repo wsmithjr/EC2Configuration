@@ -29,3 +29,5 @@ export PATH=$PATH:~/play-2.2.1/
 export PROJECT=~/play-2.2.1/samples/scala/comet-live-monitoring/
 export EC2_HOME=~/ec2-api-tools-1.6.11.0
 export PATH=$PATH:$EC2_HOME/bin
+export AWS_ACCESS_KEY=AKIAJPYMHZGKT5FHY33A
+export AWS_SECRET_KEY=TPP/96ZsiVdQmMKPEvNeX52gPn9pCYtOUS1t99dv
