@@ -9,7 +9,6 @@ chmod 400 $2
 # the following long script to be executed in the target machine are embraced by ''
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i $2 ubuntu@$1 '
 
-cd /home;
 sudo su;
 
 # install openjdk, git and unzip;
@@ -20,22 +19,23 @@ yes | sudo apt-get install git-core;
 
 # install play framework;
 sudo wget http://downloads.typesafe.com/play/2.2.1/play-2.2.1.zip;
-sudo unzip /home/play-2.2.1.zip;
-sudo chmod a+x /home/play-2.2.1/play;
+sudo unzip ~/play-2.2.1.zip;
+sudo chmod a+x ~/play-2.2.1/play;
 
 # download configuration or project from github
-cd /home
+cd ~
 sudo git clone https://github.com/jhejderup/aws-tesseract.git
 sudo git clone https://github.com/winglungngai/EC2Configuration.git
 
 # copy the configuration
-sudo cp  EC2Configuration/bashrc /etc/bashrc
+sudo cp EC2Configuration/bashrc /etc/bashrc
+sudo cp EC2Configuration/bashrc ~/.profile
 sudo source /etc/bashrc
 
 # run play when rebooting;
-$(crontab -l | { cat; echo "@reboot sudo bash -c \"/home/EC2Configuration/startup.sh\""; } | crontab -);
-sudo chmod a+x /home/EC2Configuration/startup.sh;
+$(crontab -l | { cat; echo "@reboot sudo bash -c \"~/EC2Configuration/startup.sh\""; } | crontab -);
+sudo chmod a+x ~/EC2Configuration/startup.sh;
 
 # start the web server;
-cd /home/play-2.2.1/samples/scala/comet-live-monitoring/;
-sudo /home/play-2.2.1/play start '
+cd ~/play-2.2.1/samples/scala/comet-live-monitoring/;
+sudo ~/play-2.2.1/play start '
