@@ -1,6 +1,0 @@
-
-# launch a new instance
-ec2-run-instances ami-acf9cde9 -n 1 --instance-type t1.micro --region us-west-1 --availability-zone us-west-1c --group sg_testinstance1 --key joseph_wing
-
-# find all available instance
-ec2-describe-instances --region us-west-1 --filter "key-name=joseph_wing"
