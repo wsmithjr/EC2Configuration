@@ -1,9 +1,13 @@
 #sbt https://gist.github.com/visenger/5496675
 
+cd Download
 wget http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt//0.12.3/sbt.deb
 sudo dpkg -i sbt.deb
 sudo apt-get update
 sudo apt-get install sbt
+
+add this to .profile
+export _JAVA_OPTIONS="-Xms256M -Xmx512M"
 
 # nginx https://www.digitalocean.com/community/articles/how-to-install-nginx-on-ubuntu-12-04-lts-precise-pangolin
 
