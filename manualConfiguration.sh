@@ -27,3 +27,5 @@ ssh -i joseph_wing.pem ubuntu@54.219.164.238 'sudo tar -zcvf FileTransfer.tar.gz
 scp -i joseph_wing.pem ubuntu@54.219.164.238:~/FileTransfer.tar.gz ~/Desktop/Cloud\ Computing/FileTransfer.tar.gz
 
 ssh -i joseph_wing.pem ubuntu@54.219.164.238 'sudo rm FileTransfer.tar.gz'
+
+scp -i joseph_wing.pem ~/Desktop/Cloud\ Computing/FileTransfer.tar.gz ubuntu@54.219.164.238:~/FileTransfer.tar.gz
